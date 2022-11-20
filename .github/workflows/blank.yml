@@ -2,9 +2,7 @@ name: Class Workflow
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "develop" ]
 
 jobs:
 
@@ -15,3 +13,8 @@ jobs:
     
     - name: Checkout code
       run: git checkout main
+    
+  start:
+    - name: Run go file
+      run: go run main.go
+    
